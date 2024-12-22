@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7ve0hko1n8nm"]
+
+[ext_resource type="Script" path="res://scr/line/line.gd" id="1_bsju6"]
+[ext_resource type="Script" path="res://scr/line/sub_line_manger.gd" id="2_v5rvy"]
+
+[node name="Line" type="Control"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_bsju6")
+
+[node name="LineNameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+
+[node name="SubLineManger" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("2_v5rvy")
+
+[node name="SubLineContainer" type="VBoxContainer" parent="SubLineManger"]
+offset_left = 400.0
+offset_top = 50.0
+offset_right = 440.0
+offset_bottom = 90.0
