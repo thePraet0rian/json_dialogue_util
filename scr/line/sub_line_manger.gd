@@ -44,6 +44,8 @@ func _sub_line_input(event: InputEvent) -> void:
 			sub_line_index += 1
 	elif event.is_action_pressed("ui_accept"):
 		can_input = false
+	elif event.is_action_pressed("shift"):
+		pass
 
 	_display()
 
@@ -55,3 +57,5 @@ func _display() -> void:
 			SubLines[i].visible = true
 		else:
 			SubLines[i].modulate = Color8(255, 255, 255, 255)
+
+

@@ -2,6 +2,7 @@
 	"Test_one": {
 		"Sub_Test_One": [
 			{"Line": "This is an actual dialogue line", "Portrait": "Test"},
+			{"Line": "Whats going on", "Question": "Question1"},
 			{"Line": "This is an actual dialogue line"},
 			{"Line": "This is an actual dialogue line"},
 			{"Line": "This is an actual dialogue line"},

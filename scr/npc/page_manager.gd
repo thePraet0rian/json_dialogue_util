@@ -76,17 +76,11 @@ func _close() -> void:
 func _display() -> void:
 	for i in PageTitles.size():
 		if page_index == i:
-			PageTitles[i].modulate = Color8(255, 0, 0, 255)
+			PageTitles[i].modulate = Color8(0, 0, 0, 255)
 		else:
 			PageTitles[i].modulate = Color8(255, 255, 255, 255)
 	
-	for i in Pages.size():
-		if page_index == i:
-			Pages[i].visible = true
-			Pages[i].modulate = Color8(255, 255, 0, 255)
-		else:
-			Pages[i].visible = false
-			Pages[i].modulate = Color8(255, 255, 255, 255)
+
 
 
 func _open_page() -> void:

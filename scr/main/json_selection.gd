@@ -4,9 +4,8 @@ extends Node2D
 
 signal open_file(data: Dictionary)
 
-
 @onready var FileButton: Button = $Button
-@onready var OpenFileDialogue: FileDialog = $FileDialog
+@onready var OpenFileDialogue: FileDialog = $Control/FileDialog
 
 
 func _on_button_pressed() -> void:
@@ -21,3 +20,5 @@ func _on_file_dialog_file_selected(path: String) -> void:
 	var data = JSON.parse_string(stringed_data)
 
 	open_file.emit(data)
+
+

@@ -11,6 +11,10 @@ script = ExtResource("1_j7on4")
 
 [node name="LineContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 50.0
-offset_right = 90.0
+offset_left = 200.0
+offset_right = 240.0
 offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="LineContainer"]
+layout_mode = 2
+text = "LINES:"

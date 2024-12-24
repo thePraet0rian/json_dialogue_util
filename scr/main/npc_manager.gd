@@ -4,7 +4,7 @@ extends Node2D
 
 const NPC_SCENE: PackedScene = preload("res://scn/npc/npc.tscn")
 
-@onready var NpcVbox: VBoxContainer = $Npcs
+@onready var NpcContainer: VBoxContainer = $Container/NpcContainer
 
 var Npcs: Array[Npc]
 var npc_index: int = 0
@@ -23,7 +23,7 @@ func _make_new_npc(npc_name: String, npc_data: Dictionary) -> void:
 
 	Npcs.append(NpcInstance)
 
-	NpcVbox.add_child(NpcInstance)
+	NpcContainer.add_child(NpcInstance)
 
 
 func _input(event: InputEvent) -> void:
@@ -61,3 +61,7 @@ func _open_npc() -> void:
 
 func _close_npc() -> void:
 	can_input = true
+
+
+
+

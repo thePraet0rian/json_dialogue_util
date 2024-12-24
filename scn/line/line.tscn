@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7ve0hko1n8nm"]
+[gd_scene load_steps=2 format=3 uid="uid://b7ve0hko1n8nm"]
 
 [ext_resource type="Script" path="res://scr/line/line.gd" id="1_bsju6"]
-[ext_resource type="Script" path="res://scr/line/sub_line_manger.gd" id="2_v5rvy"]
 
 [node name="Line" type="Control"]
 custom_minimum_size = Vector2(0, 30)
@@ -26,12 +25,17 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Test"
 
-[node name="SubLineManger" type="CanvasLayer" parent="."]
+[node name="Ui" type="CanvasLayer" parent="."]
 visible = false
-script = ExtResource("2_v5rvy")
 
-[node name="SubLineContainer" type="VBoxContainer" parent="SubLineManger"]
+[node name="SubLineContainer" type="VBoxContainer" parent="Ui"]
 offset_left = 400.0
-offset_top = 50.0
+offset_top = 80.0
 offset_right = 440.0
-offset_bottom = 90.0
+offset_bottom = 120.0
+
+[node name="ColorRect" type="ColorRect" parent="Ui"]
+offset_left = 384.0
+offset_top = 16.0
+offset_right = 388.0
+offset_bottom = 524.0

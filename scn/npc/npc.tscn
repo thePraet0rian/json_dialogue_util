@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://5ffwqtg1ahbx"]
+[gd_scene load_steps=2 format=3 uid="uid://5ffwqtg1ahbx"]
 
 [ext_resource type="Script" path="res://scr/npc/npc.gd" id="1_a7ma3"]
-[ext_resource type="Script" path="res://scr/npc/page_manager.gd" id="2_furfc"]
 
 [node name="Npc" type="Control"]
 custom_minimum_size = Vector2(0, 30)
@@ -19,18 +18,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -18.0
+offset_top = -12.0
+offset_right = 22.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Test"
 
-[node name="NpcPageManager" type="CanvasLayer" parent="."]
-script = ExtResource("2_furfc")
+[node name="Ui" type="CanvasLayer" parent="."]
 
-[node name="NpcPages" type="Control" parent="NpcPageManager"]
+[node name="NpcPages" type="Control" parent="Ui"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 100.0
@@ -38,8 +36,18 @@ offset_top = 70.0
 offset_right = 140.0
 offset_bottom = 110.0
 
-[node name="NpcPageTitles" type="HBoxContainer" parent="NpcPageManager"]
-offset_left = 150.0
-offset_top = 40.0
-offset_right = 190.0
-offset_bottom = 40.0
+[node name="NpcPageTitles" type="VBoxContainer" parent="Ui"]
+offset_left = 148.0
+offset_top = 80.0
+offset_right = 203.0
+offset_bottom = 105.0
+
+[node name="Label" type="Label" parent="Ui/NpcPageTitles"]
+layout_mode = 2
+text = "PAGES:"
+
+[node name="ColorRect" type="ColorRect" parent="Ui"]
+offset_left = 272.0
+offset_top = 16.0
+offset_right = 276.0
+offset_bottom = 528.0
